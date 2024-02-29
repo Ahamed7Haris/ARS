@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <style>
+        .cont {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+        }
+        .lef {
+    height: max-content;
+    width: max-content;
+    padding: 30px;
+    background-color: rgba(14, 0, 0, 0.5); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(43, 42, 42, 0.87);
+    position: relative;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.lef:hover {
+    background-color: rgba(255, 252, 252, 0.486); /* Semi-transparent black background on hover */
+}
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        button,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .date-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space elements evenly */
+            margin-bottom: 10px;
+        }
+
+        .date-group label {
+            display: block; /* Display labels as block elements */
+            margin-bottom: 5px; /* Add space between label and input */
+        }
+
+        .cont section {
+            margin-bottom: 15px;
+        }
+        img{
+             height: 6cm;
+            width:6cm;
+            border: solid 2px;
+            
+            
+        }
+        nav{
+            
+            font-size: large;
+            background-color: black;
+            margin-right: 790px;
+            padding-right:271px; 
+            margin-top: 205px;
+            
+            /* background-image: linear-gradient(to left,black,darkblue); */
+        
+        }
+        nav a{
+            display:inline;
+            margin-left: 10px;
+            color: white;
+            
+            text-decoration: none;
+        }
+        nav a:hover{
+            background-image: linear-gradient(to right,blue,darkblue);
+        }
+        
+    </style>
+    <header style="background-color: black;"><img src="logo.jpg" alt="">
+        <aside style="float: right;">
+
+            <nav >
+                <a href="">About Us</a>
+                <a href="">Fleet Details</a>
+                <a href="">Book a Flight</a>
+                <a href="">Contact</a>
+            </nav>
+        </aside>
+</header>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+</head>
+
+<body >
+    
+    
+    <section style=" background-image: url(back.png);background-repeat:no-repeat; background-size:cover;background-position:center;" class="cont" >
+        <form action="" class="lef">
+            <header style="text-align: center;font-size: larger;border: 5px solid white;background-image: linear-gradient(to left,white,blue);"><b>BOOK A FLIGHT</b></header>
+            <section style="display: block;text-align: center;">
+                <input type="radio"  value="trip" id="trip" name="trips" onclick="toggleInput('trip')">
+                <label for="">One-Way</label>
+                <input type="radio" value="trips" name="trips" id="trips" onclick="toggleInput('trips')">
+                <label for="">Two-Way</label>
+                <input type="radio" name="stop" id="stop">
+                <label for="">Multistop</label>
+                <input type="radio" name="stop" id="stop">
+                <label for="">Nonstop</label><br>
+            </section>
+            <label for="Dep">Departure City:</label>
+            <input type="text" name="Dep" id="Dep">   
+            
+            <label for="Arr">Arrival City:</label>
+            <input type="text" name="Arr" id="Arr"><br>
+            <section class="date-group">    
+                <div>
+                    <label for="Depdate">Departure Date:</label>          
+                    <input type="date" style="padding-left: 165px;" name="Depdate" id="Depdate" value="Departure Date">
+                </div>
+                <div>
+                    <label for="Arrdat">Arrival Date:</label>
+                    <input type="date" name="Arrdat" style="padding-right: 165px;text-align: center;" id="Arrdat" value="Return Date" placeholder="Return Date">
+                </div>
+            </section>
+            <section>
+                <label for="Passe">Passengers:</label>
+                <input type="number" name="Passe" id="Passe"><br>
+                <label for="">Choose your Class:</label>
+                <select name="class" id="class">
+                    <option value="default"></option>
+                    <option value="Eco">Economy Class</option>
+                    <option value="Bussi">Business Class</option>
+                    <option value="First">First Class</option>
+                </select> <br>
+                <input type="submit" id="submit" value="Book Flight">
+                <input type="reset" id="Clear" value="Clear">                
+            </section>
+        </form>   
+    </section> 
+    <section class="About" style="background-image: url(lowback.jpg);background-repeat: no-repeat;background-size:;"><h2>
+        Welcome aboard Ahar Airways, your preferred choice for budget-friendly air travel from Ahar Private Airport. With a fleet of three modern aircraft, including two Airbus A320s and one Boeing 777-200, we are committed to providing convenient and affordable flights to a diverse range of destinations.
+
+    </h2>
+
+        <h1>
+            Fleet Details:
+        </h1>
+        
+        Airbus A320 (2 aircraft)<br>
+        Boeing 777-200 (1 aircraft)<br>
+        Seating Arrangements:<br>
+        
+        <b>
+            Airbus A320 (No First Class):<br>
+        </b>
+        
+        Business Class: 30 seats<br>
+        Economy Class: 120 seats<br>
+<b>
+    Airbus A320 (With First Class):<br>
+</b>
+        
+        First Class: 12 seats<br>
+        Business Class: 24 seats<br>
+        Economy Class: 144 seats<br>
+<b>
+    Boeing 777-200:<br>
+</b>
+        First Class: 40 seats<br>
+        Business Class: 60 seats<br>
+        Economy Class: 100 seats<br>
+        <b>Safety and Connectivity</b><br>
+        At Ahar Airways, we understand the importance of accessibility and connectivity. That's why we've meticulously crafted our route network to include eight exciting destinations, ensuring that our passengers can easily reach their desired locations.
+        
+        Safety, comfort, and exceptional service are at the core of everything we do. Our dedicated team works tirelessly to ensure that every journey with us is smooth, enjoyable, and memorable.
+        
+        Moreover, Ahar Airways takes pride in its strong alliance relationships with reputable airlines. These partnerships allow us to offer our passengers access to a wider global network, seamless connections, and additional travel benefits.
+        
+        Whether you're traveling for business or leisure, Ahar Airways is here to make your journey hassle-free and delightful. Experience the joy of flying with us and discover why we're the preferred choice for travelers seeking affordable yet reliable air travel.</section> 
+</body>
+<script>
+    var Dep=document.getElementById("Trip");
+  
+    var Pass=document.getElementById("Passe").value;
+    var sub=document.getElementById("submit").click;
+    function toggleInput(option){
+        var Arr=document.getElementById("Arrdat");
+        if(option=='trip'){
+            Arr.disabled=true;
+        }
+        if(option=='trips'){
+            Arr.disabled=false
+        }
+    }
+
+    
+</script>
+</html>
