@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page - Airline</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loader {
+            width: 500px; /* Adjust loader size as needed */
+            height: 500px;
+        }
+
+        .loader-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: white; /* Airline's primary color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Airplane GIF -->
+    <img src="loadd.gif" alt="Airplane" class="loader">
+
+    <!-- Loading text -->
+    <div class="loader-text">Loading...</div>
+
+    <!-- Script to redirect after loading -->
+    <script>
+        const loadingTime = 2000; // Adjust loading time (in milliseconds)
+
+        setTimeout(() => {
+            // Replace "#" with the URL you want to redirect to
+            window.location.href = "#";
+        }, loadingTime);
+    </script>
+</body>
+</html>
